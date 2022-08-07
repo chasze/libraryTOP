@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<h1> Book Collection</h1>
+
+<div class="bookBG"  id="books"> </div>
+    
+
+
+
+<div class="addBookForm"> 
+
+<form  id='bookform' onsubmit="return false">
+    <label for="bookname">Book name:</label><br>
+    <input type="text" id="bookname" name="bookname"><br>
+    <label for="authname">Author name:</label><br>
+    <input type="text" id="authname" name="authname"> <br>
+    <label for="pages">pages:</label><br>
+    <input type="text" id="pages" name="pages"> <br>
+
+    <label for="read">Have you read this book?:</label> <input type="checkbox" id="read"  value="" name="read">
+    <br>
+    <input type="submit" value="submit">
+
+    <input type="button" id="resetBtn" value="reset">
+
+  </form>
+
+</div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {
+    background-color: #EAE3D2;
+}
+
+h1 {
+    color: #1C3879;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #607EAA;
+}
+
+.bookBG {
+    background-color: #F9F5EB;
+    
+}
+.addBookForm {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+ 
+}
+
+.bookCard {
+    border: 1px solid;
+}
+/* 
+#resetBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+form {
+    padding: 1rem;
+    border: 5px solid #607EAA;
+
+}
+label {
+
+    color: #1C3879;
+}
+
+hr {
+    color: #607EAA;
+   border: 1px solid #1C3879 90%;
+}
