@@ -16,7 +16,11 @@ console.log(form)
 let newBookName = document.getElementById("bookname").value
 let newBookAuthor = document.getElementById("authname").value
 let newBookPages = document.getElementById("pages").value
-let newBookRead = document.getElementById("read").value
+
+let newBookRead =document.getElementById("read").value
+
+
+
 console.log(newBookRead)
 
 
@@ -69,7 +73,7 @@ for (let i=0; i < myLibrary.length; i++) {
   <h2> ${myLibrary[i].title} </h2>  
   <p> ${myLibrary[i].author} <p>${myLibrary[i].pages} <p>
   `
-  if(myLibrary[i].isRead= true ) {
+  if(myLibrary[i].isRead == true ) {
     bookCollection.innerHTML += "<p> Read </p> <hr> "
   }
   else {
