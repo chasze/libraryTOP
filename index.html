@@ -20,13 +20,15 @@
 
 <form  id='bookform' onsubmit="return false">
     <label for="bookname">Book name:</label><br>
-    <input type="text" id="bookname" name="bookname"><br>
+    <input type="text" id="bookname" required name="bookname"><br>
     <label for="authname">Author name:</label><br>
-    <input type="text" id="authname" name="authname"> <br>
+    <input type="text" id="authname" required name="authname"> <br>
     <label for="pages">pages:</label><br>
-    <input type="text" id="pages" name="pages"> <br>
+    <input type="number" required id="pages" name="pages"> <br>
 
-    <label for="read">Have you read this book?:</label> <input type="checkbox" id="read"  value="" name="read">
+    <label for="read">Have you read this book?:</label> 
+    <input type="checkbox" id="read" value="" onclick="this.value=this.checked?'true':''" name="read">
+
     <br>
     <input type="submit" value="submit">
 

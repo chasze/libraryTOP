@@ -6,6 +6,12 @@ var bookCollection = document.getElementById('books');
 
 let form = document.getElementById('bookform');
 
+var delButton = document.createElement("button");
+delButton.innerHTML = "Delete";
+
+
+
+
 
 
 form.addEventListener('submit', (event) => {
@@ -19,10 +25,7 @@ let newBookPages = document.getElementById("pages").value
 
 let newBookRead =document.getElementById("read").value
 
-
-
 console.log(newBookRead)
-
 
 
 let newBook = new Book( newBookName, newBookAuthor, newBookPages, newBookRead)
@@ -69,19 +72,37 @@ function updateLibrary() {
 
 
 for (let i=0; i < myLibrary.length; i++) { 
-  bookCollection.innerHTML += ` 
-  <h2> ${myLibrary[i].title} </h2>  
-  <p> ${myLibrary[i].author} <p>${myLibrary[i].pages} <p>
-  `
-  if(myLibrary[i].isRead == true ) {
-    bookCollection.innerHTML += "<p> Read </p> <hr> "
+  const bookDiv = document.createElement('div')
+  bookDiv.classList.add('bookDiv')
+  
+  const newTitle = document.createElement('h1')
+  newTitle.textContent = myLibrary[i].title
+  bookDiv.appendChild(newTitle)
+
+  const newBookAuthor = document.createElement('h2')
+  newBookAuthor.textContent = myLibrary[i].author
+  bookDiv.appendChild(newBookAuthor)
+
+  const newBookPages = document.createElement('h2')
+  newBookPages.textContent = myLibrary[i].pages
+  bookDiv.appendChild(newBookPages)
+
+  const readStatus = document.createElement('h3')
+  if(myLibrary[i].isRead) {
+    readStatus.textContent = `You have already read ${myLibrary[i].title}`
+
   }
   else {
-    bookCollection.innerHTML += "<p>not Read </p> <hr>  "
-  }
-  
-  }
+    readStatus.textContent = `You have not yet read ${myLibrary[i].title}`
 
+  }
+  bookDiv.appendChild(readStatus)
+  // bookDiv.appendChild(delButton)
+
+
+  bookCollection.appendChild(bookDiv)
+
+  }
 
 
 }

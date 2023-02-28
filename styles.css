@@ -15,8 +15,34 @@ h2 {
 
 .bookBG {
     background-color: #F9F5EB;
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+.bookDiv {
+    border: 2px solid gray;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1C387944;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.bookDiv h1, .bookDiv h2, .bookDiv h3 {
+    display: inline-block;
+    margin: .25rem .5rem;
+    padding: 0 .5rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
 .addBookForm {
 
     display: flex;
